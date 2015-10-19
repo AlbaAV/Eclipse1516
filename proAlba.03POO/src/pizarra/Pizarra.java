@@ -51,12 +51,21 @@ public class Pizarra extends JFrame {
     }
     /**
      * Anyade a la pizarra una figura. AÃ±adir una figura a la pizarra implica que 
-     * se mostrara¡ en ella. Para ello Pizarra llama al metodo dibujar de las 
+     * se mostrara en ella. Para ello Pizarra llama al metodo dibujar de las 
      * figuras que contiene.
      * @param figura La Figura que se anyade a la pizarra.
      */
     public void anyadir(Figura figura) {
         this.listaFiguras.add(figura);
+        repaint();
+    }
+    /**
+     * Quita de la pizarra una figura. Quitar una figura de la pizarra implica que dejará
+     * de mostrarse en ella. 
+     * @param figura La figura que se quita de la pizarra
+     */
+    public void quitar(Figura figura) {
+        this.listaFiguras.remove(figura);
         repaint();
     }
     
@@ -69,7 +78,7 @@ public class Pizarra extends JFrame {
         repaint();
     }
     /**
-     * Mantiene la pizara en espera, sin refrescarla, durante el número de milisegundos indicado.
+     * Mantiene la pizara en espera, sin refrescarla, durante el numero de milisegundos indicado.
      */
     public void esperar (int milisegundos) {
     	try {
