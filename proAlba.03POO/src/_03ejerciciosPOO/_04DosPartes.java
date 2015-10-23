@@ -1,4 +1,4 @@
-package _03ejercicios;
+package _03ejerciciosPOO;
 
 import figuras.Figura;
 import figuras.Rectangulo;

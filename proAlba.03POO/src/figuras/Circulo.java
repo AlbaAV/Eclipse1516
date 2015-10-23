@@ -59,4 +59,7 @@ public class Circulo extends Figura{
     public static double area(double r){
         return Math.PI*r*r;
     }
+    public double longitud(){
+    	return 2 * Math.PI * getRadio();
+    }
 }
