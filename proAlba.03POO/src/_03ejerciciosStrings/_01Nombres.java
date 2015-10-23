@@ -31,7 +31,7 @@ public class _01Nombres {
 		return primera.substring(0, esp);
 	}
 	
-	public static String segundaPalabra(String texto){
+	//public static String segundaPalabra(String texto){
 		
 	}
 }
