@@ -7,6 +7,7 @@ public class _01Nombres {
 		System.out.println("Introduce el nombre completo (nombre, 1ºApellido y 2ºApellido): ");
 		Scanner tec = new Scanner(System.in);
 		String nombre = tec.nextLine() ;
+		
 		//inicial
 		char ini =inicial(nombre);
 		System.out.println("Primer Caracter " + ini);
@@ -33,6 +34,7 @@ public class _01Nombres {
 		char ini = text.charAt(0);
 		return ini ;
 	}
+	
 	public static char ultima(String texto){
 		String text = texto.toUpperCase();
 		
@@ -40,7 +42,6 @@ public class _01Nombres {
 		return fin;
 	}
 
-	
 	public static String primeraPalabra(String texto){
 		String primera = texto.toUpperCase();
 		int esp = primera.indexOf(' ');
