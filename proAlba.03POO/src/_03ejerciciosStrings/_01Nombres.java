@@ -43,20 +43,20 @@ public class _01Nombres {
 	}
 
 	public static String primeraPalabra(String texto){
-		String primera = texto.toUpperCase();
+		String primera = texto.toUpperCase();//sería válido sólo texto.toUpperCase();
 		int esp = primera.indexOf(' ');
 		return primera.substring(0, esp);
 	}
 	
 	public static String segundaPalabra(String texto){
-		String segunda = texto.toUpperCase();
+		String segunda = texto.toUpperCase();//sería válido sólo texto.toUpperCase();
 		int esp = segunda.indexOf(' ');
 		int ultEsp = segunda.lastIndexOf(' ');
 		return segunda.substring(esp+1, ultEsp);
 	}
 	
 	public static String terceraPalabra(String texto){
-		String segunda = texto.toUpperCase();
+		String segunda = texto.toUpperCase();//sería válido sólo texto.toUpperCase();
 		int ultEsp = segunda.lastIndexOf(' ');
 		return segunda.substring(ultEsp+1);
 	}
