@@ -5,12 +5,12 @@ public class _09Caracteres {
 		char letra1 = 'a';
 		int codigo1 = (int) letra1; //Codigo unicode de la letra
 		
-		System.out.println("el código de la letra " + letra1 + " es " +codigo1);
+		System.out.println("el codigo de la letra " + letra1 + " es " +codigo1);
 		
-		letra1 = '€';
+		letra1 = 'a';
 		codigo1 = (int) letra1; //Codigo unicode de la letra
 		
-		System.out.println("el código de la letra " + letra1 + " es " +codigo1);
+		System.out.println("el codigo de la letra " + letra1 + " es " +codigo1);
 		
 		
 		int codigo2 = 32450;
