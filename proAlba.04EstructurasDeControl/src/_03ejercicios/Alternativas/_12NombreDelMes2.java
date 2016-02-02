@@ -23,7 +23,7 @@ public class _12NombreDelMes2 {
 		else if(mes ==10) nombre = "octubre";
 		else if(mes ==11) nombre = "noviembre";
 		else if(mes ==12) nombre = "diciembre"; 
-		else nombre ="ï¿½ï¿½ï¿½ERROR!!!";
+		else nombre ="¡¡ ERROR!!!";
 		
 		// o else nombre= "diciembre";
 		
