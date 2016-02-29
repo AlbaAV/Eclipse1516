@@ -1,33 +1,34 @@
 package _03ejercicios._02gestionhospital;
 
-
 public class TestPaciente {
+	public static void main(String[] args) {
+		Paciente juan = new Paciente("juan",20);
+		Paciente miguel = new Paciente("miguel",30);
+		System.out.println(juan);
+		System.out.println(miguel);
 
-	public static void main(String[] args) {	
-		Paciente p1 = new Paciente("Juan",20);
-		Paciente p2 = new Paciente("Miguel",30);
-		
-		System.out.println("Paciente 1: " + p1.toString());
-		System.out.println("Paciente 2: " + p2.toString());
-	
-		if(p1.compareTo(p2)<0) System.out.println("Paciente mas leve " +p1);
-		else if(p1.compareTo(p2)>0)
-			System.out.println("Paciente mas leve " +p2);
-		else
-			System.out.println("Los dos pacientes son iguales" );
-		
+		//Mostrar el menor
+		if(juan.compareTo(miguel) < 0) System.out.println("El menor es " +juan);
+		else  if(juan.compareTo(miguel) > 0) System.out.println("El menor es " + miguel);
+		else System.out.println("Los dos pacientes son iguales");
 		
 		//De otra forma
-		int resComp = p1.compareTo(p2);
+		int resComp = juan.compareTo(miguel);
 		Paciente menor;
-		if(resComp <0) menor = p1;
-		else menor = p2;
-		System.out.println("El menor es " + menor);
+		if(resComp < 0) menor = juan;
+		else menor = miguel;
+		System.out.println("El menor es " + menor );
 		
-			while(p1.getEstado() != p2.getEstado()){
-				if(p1.getEstado()<p2.getEstado())
-					p1.mejorar();
-				else p2.mejorar();
+		//Aplicar mejoras al mas grave hasta que tengan el mismo estado
+		System.out.println("Mejorar al mas grave");
+		while(juan.getEstado() != miguel.getEstado()) {
+			if(juan.getEstado() < miguel.getEstado()){
+				juan.mejorar();
+			} else {
+				miguel.mejorar();
 			}
+			System.out.println(juan);
+			System.out.println(miguel);
 		}
+	}
 }

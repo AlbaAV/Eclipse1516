@@ -42,7 +42,7 @@ public class ListaCorredores {
 		
 		}
 		if (enc){
-			//DEsplazamos elementos a la derecha
+			//Desplazamos elementos a la derecha
 			for(int i=numCorredores-1;i>=pos;i--){
 				lista[i+1]=lista[i];
 			}

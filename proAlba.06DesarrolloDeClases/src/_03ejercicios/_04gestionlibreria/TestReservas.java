@@ -2,7 +2,7 @@ package _03ejercicios._04gestionlibreria;
 
 import java.util.Scanner;
 
-public class TestReserva {
+public class TestReservas {
 	static Scanner tec = new Scanner(System.in);
 
 	public static void main(String[] args) {

@@ -79,7 +79,7 @@ public class Corredor {
 		return mostrar;
 		
 		/*
-		 * Â¡OTRA FORMA!
+		 * DE ¡OTRA FORMA!
 		 * String result = "(" + dorsal +") - " + nombre + " - " +salida.toString();
 		 * if(llegada != null){
 		 * 	result += " - " + llegada.toString() + " - " + getDuracion() + " segundos";
@@ -90,7 +90,7 @@ public class Corredor {
 	public String toString2(){
 		String mostrar;
 		try{
-			mostrar ="(" + dorsal + ") - " +nombre+ " - Salida: " + salida +" - DuraciÃ³n: " + getDuracion() + " segundos";
+			mostrar ="(" + dorsal + ") - " +nombre+ " - Salida: " + salida +" - Duración: " + getDuracion() + " segundos";
 		}catch(NullPointerException ex){
 			mostrar ="(" + dorsal + ") - " +nombre+ " - Salida: " + salida;
 		}

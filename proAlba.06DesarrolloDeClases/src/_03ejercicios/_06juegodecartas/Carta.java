@@ -92,6 +92,7 @@ public class Carta {
 		
 		return mostrar;
 	}
+	
 	/*
 	 * public String toString(){
 	 * String result = this.valor + " de "
