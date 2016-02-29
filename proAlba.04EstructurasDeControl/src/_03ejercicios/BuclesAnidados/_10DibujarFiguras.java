@@ -11,6 +11,7 @@ public class _10DibujarFiguras {
 		dibRecAsteriscos(x,y);
 		dibRecNumeros1(x,y);
 		dibRecNumeros2(x,y);
+		dibRecNumeros3(x,y);
 	}
 	
 	public static void dibRecAsteriscos(int ancho,int alto){
@@ -44,6 +45,16 @@ public class _10DibujarFiguras {
 			rec += "\n";
 		}
 		System.out.println(rec+"\n");
+	}
+	
+	public static void dibRecNumeros3(int ancho, int alto){
+		for(int i = 0; i < alto; i++){
+			for(int j = 1; j <= ancho; j++){
+				System.out.print(String.format("%02d", j + (i*ancho)) + " ");
+			}
+			System.out.println();
+		}
+		System.out.println();
 	}
 	
 }
