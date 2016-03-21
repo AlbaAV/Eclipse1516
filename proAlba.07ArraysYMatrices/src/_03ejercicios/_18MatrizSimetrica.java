@@ -9,21 +9,20 @@ public class _18MatrizSimetrica {
 					  {3,7,5}};
 		
 		System.out.println("¿Es simetrica m?: " + esSimetrica(m));
+		System.out.println();
 	}
 	
 	public static boolean esSimetrica(int m[][]){
 		boolean simetrica = true;
-		for (int i = 0; i < m.length; i++){
-			
-			for(int j = 0; j < m[i].length; j++){		
-				
-				System.out.print((m[i][j]) + " ");
-				
+			for (int i = 0; i < m.length && simetrica; i++){
 				if(m[i].length != m.length) simetrica = false;
-				if(m[i][j] != m[j][i]) simetrica = false;
+				for(int j = 0; j < m[i].length && simetrica; j++){						
+					System.out.print((m[i][j]) + " ");
+					if(m[i][j] != m[j][i]) simetrica = false;
+				}
+				System.out.println();
 			}
-			System.out.println();
-		}
 		return simetrica;
 	}
+	
 }
