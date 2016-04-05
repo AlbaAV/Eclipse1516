@@ -14,6 +14,7 @@ public class Cirujano extends Medico {
 		System.out.println("El cirujano realiza una incisión");
 	}
 	
+	@Override
 	public String toString(){
 		String res = super.toString();
 		res += "\nCirujano";
