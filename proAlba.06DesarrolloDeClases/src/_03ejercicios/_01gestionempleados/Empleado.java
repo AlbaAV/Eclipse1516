@@ -2,7 +2,7 @@ package _03ejercicios._01gestionempleados;
 
 import java.util.Calendar;
 
-public class Empleado {
+public class Empleado implements Comparable{
 	private String nombre;
 	private String dni;
 	private int anyoIngreso;
@@ -16,7 +16,7 @@ public class Empleado {
 	}
 	
 	
-	//Métodos
+	//Mï¿½todos
 	
 	//GETTERS
 	public String getNombre(){
@@ -51,7 +51,7 @@ public class Empleado {
 	public String toString(){
 		return "Nombre: " + nombre +
 				"\nDni: " + dni +
-				"\nAño de Ingreso: " + anyoIngreso + 
+				"\nAï¿½o de Ingreso: " + anyoIngreso + 
 				"\nSueldo Bruto: " + sueldoBruto;
 	}
 	
@@ -77,7 +77,7 @@ public class Empleado {
 		 */
 	}
 	
-	
+	@Override
 	public int compareTo(Object o){
 		Empleado e = (Empleado) o;
 		if(dni.compareTo(e.dni)>0) return 1;
