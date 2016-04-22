@@ -1,6 +1,6 @@
 package _03ejercicios.herencia._04televisores;
 
-public abstract class Televisor implements Comparable{
+public abstract class Televisor implements Comparable<Televisor>{
 	private String marca;
 	private String modelo;
 	private double precio;
@@ -69,23 +69,16 @@ public abstract class Televisor implements Comparable{
 			return false;
 	}
 
-	
-	public int compareTo(Object o){
-		Televisor t = (Televisor) o;
-		int compMarca = marca.compareTo(t.marca);
-			int compModel = modelo.compareTo(t.modelo);
+	public int compareTo(Televisor t){
+		int compMarca = this.marca.compareTo(t.marca);
+		int compModel = this.modelo.compareTo(t.modelo);
 			
-			if (compMarca < 0)
-				return -1;
-			else if (compMarca > 0)
-				return 1;
-			else if (compModel < 0)
-				return -1;
-			else if (compModel > 0)
-				return 1;
-			else
-				return 0;
-		}
+		if (compMarca < 0) return -1;
+		else if (compMarca > 0) return 1;
+		else if (compModel < 0)return -1;
+		else if (compModel > 0) return 1;
+		else return 0;
+	}
 	@Override
 	public String toString(){
 		String res = "	Marca: " +marca 
