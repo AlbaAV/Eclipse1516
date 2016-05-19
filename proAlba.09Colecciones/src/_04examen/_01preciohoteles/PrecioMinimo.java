@@ -22,24 +22,10 @@ public class PrecioMinimo {
 		c.add(new Hotel("B", 22));
 
 		precioMinimoDeHoteles(c);
-		
-		System.out.println();
-		
-		precioMinimoDeHoteles2(c);
-		
-		Collection<Hotel> c2 = new ArrayList<>();
 
-		c2.add(new Hotel("A", 20));
-		c2.add(new Hotel("B", 10));
-		c2.add(new Hotel("C", 30));
-		c2.add(new Hotel("A", 18));
-		c2.add(new Hotel("B", 21));
-		c2.add(new Hotel("B", 22));
-		c2.add(new Hotel("A", 21));
-		c2.add(new Hotel("C", 22));
-		
-		System.out.println("Por Precio: ");
-		hotelesPorPrecio(c2);
+		System.out.println();
+
+		precioMinimoDeHoteles2(c);
 
 	}
 
@@ -52,52 +38,29 @@ public class PrecioMinimo {
 				h.replace(hotel.getNombre(), hotel.getPrecio());
 			}
 		}
-		
+
 		System.out.println(h.toString());
 	}
-	
-	
-	//Correccion Javi
-	public static void precioMinimoDeHoteles2(Collection<Hotel> c){
-		Map <String,Double> m = new HashMap<>();
-		//Recorremos la coleccion
-		for(Hotel h : c){
+
+	// Correccion Javi
+	public static void precioMinimoDeHoteles2(Collection<Hotel> c) {
+		Map<String, Double> m = new HashMap<>();
+		// Recorremos la coleccion
+		for (Hotel h : c) {
 			if (!m.containsKey(h.getNombre())) {
 				m.put(h.getNombre(), h.getPrecio());
 			} else {
 				double precioMinimo = m.get(h.getNombre());
-				if(h.getPrecio() < precioMinimo) {
+				if (h.getPrecio() < precioMinimo) {
 					m.put(h.getNombre(), h.getPrecio());
 				}
 			}
 		}
-		//Mostrar los resultados
+		// Mostrar los resultados
 		Set<String> nombres = m.keySet();
-		TreeSet<String> nombresOrdenados = new TreeSet<> (nombres);
-		for(String n : nombresOrdenados){
+		TreeSet<String> nombresOrdenados = new TreeSet<>(nombres);
+		for (String n : nombresOrdenados) {
 			System.out.println("Hotel: " + n + " mejor precio: " + m.get(n));
-		}
-	}
-	
-	public static void hotelesPorPrecio(Collection <Hotel> c){
-		Map <Double,List<String>> m = new HashMap<>();
-		//Recorremos la coleccion
-		for(Hotel h : c){
-			if (!m.containsKey(h.getPrecio())) {
-				List<String> l = new LinkedList<>();
-				l.add(h.getNombre());
-				m.put(h.getPrecio(), l);
-			} else {
-				List<String> l = m.get(h.getPrecio());
-				l.add(h.getNombre());
-				m.replace(h.getPrecio(), l);
-				}
-			}
-		//Mostrar los resultados
-		Set<Double>numeros = m.keySet();
-		TreeSet<Double> num = new TreeSet<>(numeros);
-		for(Double n : num){
-			System.out.println("Precio: " + n + " hoteles: " + m.get(n));
 		}
 	}
 
