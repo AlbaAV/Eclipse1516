@@ -1,4 +1,4 @@
-package _04examen._01preciohoteles;
+package _04examen._01PrecioHoteles;
 
 import java.util.ArrayList;
 import java.util.Collection;

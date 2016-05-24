@@ -1,4 +1,4 @@
-package _04examen._02granteatre;
+package _04examen._02GranTeatre;
 
 public class ObraTeatro extends Evento{
 	private String director;

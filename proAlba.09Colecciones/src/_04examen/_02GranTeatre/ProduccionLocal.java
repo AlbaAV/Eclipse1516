@@ -1,4 +1,4 @@
-package _04examen._02granteatre;
+package _04examen._02GranTeatre;
 
 public class ProduccionLocal extends Evento{
 	private String organizador;
