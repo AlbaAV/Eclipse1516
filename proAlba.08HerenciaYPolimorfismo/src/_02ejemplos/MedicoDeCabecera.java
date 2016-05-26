@@ -1,5 +1,9 @@
 package _02ejemplos;
 
+/**
+ * @author ALBA
+ *
+ */
 public class MedicoDeCabecera extends Medico{
 	private boolean visitaLasCasas;
 	
@@ -8,7 +12,7 @@ public class MedicoDeCabecera extends Medico{
 		this.visitaLasCasas = vc;
 	}
 	public void aconsejarPaciente(){
-		System.out.println("Médico de cabecera aconseja a paciente");
+		System.out.println("Medico de cabecera aconseja a paciente");
 	}
 	
 	@Override

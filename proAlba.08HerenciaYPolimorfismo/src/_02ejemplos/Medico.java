@@ -8,7 +8,7 @@ public class Medico {
 	}
 	public void tratarPaciente()
 	{
-		System.out.println("Médico trata paciente");
+		System.out.println("Medico trata paciente");
 	}
 
 	public boolean isTrabajaEnHospital() {
