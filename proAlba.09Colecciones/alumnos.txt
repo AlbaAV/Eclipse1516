@@ -1,0 +1,15 @@
+16
+daniel
+2 ESO A
+12
+juan
+1 ESO A
+9
+miguel
+1 ESO C
+4
+rosa
+1 ESO B
+2
+ana
+1 ESO A
