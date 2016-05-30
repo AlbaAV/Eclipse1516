@@ -15,19 +15,19 @@ public class _03GenericosV7 {
 	
 	
 	// a)
-	public static <T extends Comparable> T minimo (T o1,T o2){
+	public static <T extends Comparable<T>> T minimo (T o1,T o2){
 		if(o1.compareTo(o2) < 0) return o1;
 		else return o2;
 	}
 	
 	// b)
-	public static <T extends Comparable> T maximo (T o1,T o2){
+	public static <T extends Comparable<T>> T maximo (T o1,T o2){
 		if(o1.compareTo(o2) > 0) return o1;
 		else return o2;
 	}
 	
 	// c)
-	public static <T extends Comparable> T minimoA (T v[]){
+	public static <T extends Comparable<T>> T minimoA (T v[]){
 		T minimo = v[0];
 		for(int i = 1; i < v.length; i++){
 			if(v[i].compareTo(minimo)< 0) minimo = v[i];
@@ -36,7 +36,7 @@ public class _03GenericosV7 {
 	}
 	
 	// d)
-		public static <T extends Comparable> T maximoA (T v[]){
+		public static <T extends Comparable<T>> T maximoA (T v[]){
 			T maximo = v[0];
 			for(int i = 1; i < v.length; i++){
 				if(v[i].compareTo(maximo) > 0) maximo = v[i];
@@ -54,7 +54,7 @@ public class _03GenericosV7 {
 	}
 	
 	// f)
-	public static <T extends Comparable> int numVecesOrdenado(T v[],T x){
+	public static <T extends Comparable<T>> int numVecesOrdenado(T v[],T x){
 		int cont = 0;
 		Arrays.sort(v);
 		boolean enc = false;
@@ -69,7 +69,7 @@ public class _03GenericosV7 {
 	}
 	
 	// g)
-	public static <T extends Comparable> int mayores(T v[], T x){
+	public static <T extends Comparable<T>> int mayores(T v[], T x){
 		int cont = 0;
 		for(int i = 0; i < v.length; i++){
 			if(v[i].compareTo(x) > 0) cont++;
@@ -78,7 +78,7 @@ public class _03GenericosV7 {
 	}
 	
 	// h)
-	public static <T extends Comparable> int mayoresOrdenado(T v[], T x){
+	public static <T extends Comparable<T>> int mayoresOrdenado(T v[], T x){
 		int cont = 0;
 		Arrays.sort(v);
 		boolean enc = false;
@@ -90,7 +90,7 @@ public class _03GenericosV7 {
 	}
 	
 	// i)
-	public static <T extends Comparable> int menores(T v[], T x){
+	public static <T extends Comparable<T>> int menores(T v[], T x){
 		int cont = 0;
 		for(int i = 0; i < v.length; i++){
 			if(v[i].compareTo(x) < 0) cont++;
@@ -99,7 +99,7 @@ public class _03GenericosV7 {
 	}
 	
 	// j)
-	public static <T extends Comparable> int menoresOrdenado(T v[], T x){
+	public static <T extends Comparable<T>> int menoresOrdenado(T v[], T x){
 		int cont = 0;
 		Arrays.sort(v);
 		boolean enc = false;
@@ -120,7 +120,7 @@ public class _03GenericosV7 {
 	}
 	
 	// l)
-	public static <T extends Comparable> boolean estaEnOrdenado(T v[], T x){
+	public static <T extends Comparable<T>> boolean estaEnOrdenado(T v[], T x){
 		boolean mayor = false;
 		boolean enc = false;
 		Arrays.sort(v);
@@ -132,7 +132,7 @@ public class _03GenericosV7 {
 	}
 	
 	// m)
-		public static <T extends Comparable> int posicionDe(T v[], T x){
+		public static <T extends Comparable<T>> int posicionDe(T v[], T x){
 			boolean enc = false;
 			int pos = -1;
 			for(int i = 0; i < v.length && !enc; i++){
@@ -145,7 +145,7 @@ public class _03GenericosV7 {
 			return pos;		
 		}
 	// n)
-	public static <T extends Comparable> int posicionDeOrdenado(T v[], T x){
+	public static <T extends Comparable<T>> int posicionDeOrdenado(T v[], T x){
 		boolean mayor = false;
 		boolean enc = false;
 		int pos = -1;
@@ -161,7 +161,7 @@ public class _03GenericosV7 {
 	}
 	
 	// o)
-	public static <T extends Comparable> boolean estaOrdenado(T v[]){
+	public static <T extends Comparable<T>> boolean estaOrdenado(T v[]){
 		boolean enc = true;
 		for(int i = 0; i < v.length-1 && enc; i++){	
 			if(v[i].compareTo(v[i+1]) > 0) enc = false;

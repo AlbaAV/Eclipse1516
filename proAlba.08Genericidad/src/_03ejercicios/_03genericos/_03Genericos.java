@@ -79,7 +79,7 @@ public class _03Genericos {
 		Arrays.sort(v);
 		boolean enc = false;
 		for(int i = 0;i < v.length && !enc; i++){
-			if(((Comparable)v[i]).compareTo(x) == 0) {
+			if(v[i].equals(x)) {
 				cont ++;
 			}else if(((Comparable)v[i]).compareTo(x) > 0){
 				enc = true;
@@ -98,40 +98,40 @@ public class _03Genericos {
 		}
 		
 		// h)
-		public static <T extends Comparable> int mayoresOrdenado(T v[], T x){
+		public static int mayoresOrdenado(Object v[], Object x){
 			int cont = 0;
 			Arrays.sort(v);
 			boolean enc = false;
 			for(int i = v.length; i > 0 && !enc; i--){
-				if(v[i].compareTo(x) > 0) cont++;
-				else if(v[i].compareTo(x) == 0) enc = true;
+				if(((Comparable) v[i]).compareTo(x) > 0) cont++;
+				else if(((Comparable) v[i]).compareTo(x) == 0) enc = true;
 			}
 			return cont;
 		}
 		
 		// i)
-		public static <T extends Comparable> int menores(T v[], T x){
+		public static int menores(Object v[], Object x){
 			int cont = 0;
 			for(int i = 0; i < v.length; i++){
-				if(v[i].compareTo(x) < 0) cont++;
+				if(((Comparable) v[i]).compareTo(x) < 0) cont++;
 			}
 			return cont;
 		}
 		
 		// j)
-		public static <T extends Comparable> int menoresOrdenado(T v[], T x){
+		public static int menoresOrdenado(Object v[], Object x){
 			int cont = 0;
 			Arrays.sort(v);
 			boolean enc = false;
 			for(int i = 0; i < v.length && !enc; i++){
-				if(v[i].compareTo(x) < 0) cont++;
-				else if(v[i].compareTo(x) == 0) enc = true;
+				if(((Comparable) v[i]).compareTo(x) < 0) cont++;
+				else if(((Comparable)v[i]).compareTo(x) == 0) enc = true;
 			}
 			return cont;
 		}
 		
 		// k)
-		public static <T> boolean estaEn(T v[], T x){
+		public static boolean estaEn(Object v[], Object x){
 			boolean enc = false;
 			for(int i = 0; i < v.length && !enc; i++){
 				if(v[i].equals(x)) enc = true;
