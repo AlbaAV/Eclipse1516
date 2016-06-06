@@ -42,6 +42,7 @@ public class Aula {
 		double capa =superficie()/1.4;
 		return (int)capa;
 	}
+	
 	@Override
 	public String toString(){
 		String res = "	Codigo: " +codigo 
